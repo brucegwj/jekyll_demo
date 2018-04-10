@@ -1,36 +1,15 @@
 　　<!DOCTYPE html>
 
 　　<html>
-
-　　<head>
-
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-　　　　<title>{{ page.title }}</title>
-		<style>
-		    * {margin: 0;padding: 0;box-sizing: border-box;}
-		    .nav {width: 100%;padding: 20px;position: relative;overflow: hidden;}
-		    a{text-decoration: none;color: #000;}
-		    .nav li {list-style: none;position: relative;float: left;width: 20%;text-align: center;
-		        font-size: 18px;color: #000;line-height: 1;transition: 0.2s all linear;cursor: pointer;}
-		    .nav li::before {content: "";position: absolute;top: 0;left: 100%;width: 0;
-		        height: 100%;border-bottom: 2px solid #000;transition: 0.2s all linear;}
-		    .nav li:hover::before {width: 100%;top: 0;left: 0;transition-delay: 0.1s;border-bottom-color: #000;}
-		    /* 为所有相同的父元素中位于 li:hover 之后的所有li::before设置样式： */
-		    .nav li:hover~ .nav li::before {left: 0;}
-		    /* 点击的时候触发点击样式 */
-		    .nav li:active {background: #000;color: #fff;}
-		    h2 {
-		    	text-align: center;
-		    }
-		</style>
-
-　　</head>
-
-　　<body>
-
-　　　　{{ content }}
-
-　　</body>
-
+	　　<head>
+	　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<link rel="shortcut icon" type="image/png" href="../static/logo.png">
+			<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+	　　　　<title>{{ page.title }}</title>
+	　　</head>
+	　　<body>
+			<div id='home'>
+				{{ content }}
+			</div>
+	　　</body>
 　　</html>
